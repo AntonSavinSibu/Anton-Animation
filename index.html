@@ -3,325 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="description" content="Anton Animation — downloadable animated PowerPoint templates.">
-
 <title>Anton Animation | PowerPoint Animations</title>
 
 <style>
 :root {
-    --bg: #090b10;
-    --panel: #11151f;
-    --panel2: #151a26;
-    --text: #f7f7fb;
-    --muted: #aeb5c7;
-    --accent: #9b63ff;
-    --accent-light: #c7a5ff;
-    --border: #292e3d;
+  --bg:#0b0d12;
+  --panel:#121620;
+  --panel2:#171b27;
+  --text:#f7f7fb;
+  --muted:#a8afbf;
+  --accent:#9b6cff;
+  --accent2:#c5a8ff;
+  --border:#272d3b;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing:border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background:
-        radial-gradient(
-            circle at 15% 0%,
-            rgba(104, 50, 180, 0.20),
-            transparent 32%
-        ),
-        #090b10;
-    color: var(--text);
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 0%, #21153d 0, transparent 35%),
+    var(--bg);
+  color:var(--text);
 }
 
-/* HEADER */
-
 header {
-    padding: 45px 24px 80px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(139, 92, 246, 0.12),
-            transparent 45%
-        );
+  padding:72px 24px 58px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(155,108,255,.10),transparent);
 }
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 8px 14px;
-
-    border: 1px solid #3b3152;
-    border-radius: 999px;
-
-    color: var(--accent-light);
-
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    font-size: 12px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 13px;
+  border:1px solid #3a3150;
+  border-radius:999px;
+  color:var(--accent2);
+  font-weight:700;
+  letter-spacing:.08em;
+  font-size:12px;
 }
 
 h1 {
-    font-size: clamp(42px, 8vw, 78px);
-    margin: 20px 0 12px;
-    letter-spacing: -0.05em;
+  font-size:clamp(42px,8vw,78px);
+  margin:20px 0 12px;
+  letter-spacing:-.05em;
 }
 
 .hero {
-    max-width: 900px;
-    margin: auto;
-
-    color: var(--muted);
-
-    font-size: 18px;
-    line-height: 1.7;
+  max-width:760px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
 }
 
-/* MAIN */
-
 main {
-    max-width: 1400px;
-    margin: auto;
-    padding: 70px 40px 90px;
+  max-width:1120px;
+  margin:auto;
+  padding:48px 24px 80px;
 }
 
 .section-head {
-    margin-bottom: 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:24px;
 }
 
 .section-head h2 {
-    margin: 0;
-    font-size: 38px;
+  margin:0;
+  font-size:28px;
 }
 
 .section-head p {
-    margin: 8px 0 0;
-    color: var(--muted);
-    font-size: 18px;
+  margin:0;
+  color:var(--muted);
 }
-
-/* GRID */
 
 .grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
-    gap: 26px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
 }
 
-/* CARD */
-
 .card {
-    background:
-        linear-gradient(
-            145deg,
-            var(--panel2),
-            var(--panel)
-        );
-
-    border: 1px solid var(--border);
-
-    border-radius: 24px;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+  background:linear-gradient(145deg,var(--panel2),var(--panel));
+  border:1px solid var(--border);
+  border-radius:22px;
+  overflow:hidden;
+  transition:.2s transform,.2s border-color,.2s box-shadow;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-
-    border-color: #65489a;
-
-    box-shadow:
-        0 18px 55px rgba(0, 0, 0, 0.35);
+  transform:translateY(-4px);
+  border-color:#5b477f;
+  box-shadow:0 16px 45px rgba(0,0,0,.25);
 }
-
-/* NUMBER AREA */
 
 .icon {
-    height: 165px;
-
-    display: grid;
-    place-items: center;
-
-    font-size: 58px;
-    font-weight: 800;
-
-    color: var(--accent-light);
-
-    background:
-        radial-gradient(
-            circle at 50% 45%,
-            rgba(139, 92, 246, 0.28),
-            transparent 60%
-        ),
-        #10131c;
+  height:120px;
+  display:grid;
+  place-items:center;
+  font-size:40px;
+  font-weight:800;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(155,108,255,.28),transparent 58%),
+    #10131c;
+  color:var(--accent2);
 }
 
-/* CARD CONTENT */
-
 .card-body {
-    padding: 28px 30px 30px;
+  padding:22px;
 }
 
 .tag {
-    font-size: 12px;
-
-    letter-spacing: 0.13em;
-
-    color: var(--accent-light);
-
-    font-weight: 800;
+  font-size:10px;
+  letter-spacing:.13em;
+  color:var(--accent2);
+  font-weight:800;
 }
 
 .card h2 {
-    margin: 12px 0 10px;
-
-    font-size: 27px;
+  margin:9px 0 8px;
+  font-size:22px;
 }
 
 .card p {
-    margin: 0 0 28px;
-
-    color: var(--muted);
-
-    line-height: 1.6;
-
-    font-size: 17px;
-
-    min-height: 54px;
+  margin:0 0 20px;
+  color:var(--muted);
+  line-height:1.55;
+  min-height:49px;
 }
 
-/* BUTTON */
-
 .download {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    text-decoration: none;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #9b63ff,
-            #9960f5
-        );
-
-    padding: 16px 20px;
-
-    border-radius: 14px;
-
-    font-weight: 800;
-
-    font-size: 17px;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  background:var(--accent);
+  padding:13px 16px;
+  border-radius:12px;
+  font-weight:800;
 }
 
 .download:hover {
-    background:
-        linear-gradient(
-            135deg,
-            #aa78ff,
-            #a66dff
-        );
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 25px rgba(139, 92, 246, 0.25);
+  background:#aa80ff;
 }
-
-/* NOTE */
-
-.note {
-    margin-top: 40px;
-
-    padding: 20px 22px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 16px;
-
-    color: var(--muted);
-
-    line-height: 1.6;
-}
-
-/* FOOTER */
 
 footer {
-    text-align: center;
-
-    padding: 30px 20px;
-
-    color: #777f90;
-
-    border-top: 1px solid var(--border);
-
-    font-size: 13px;
+  text-align:center;
+  padding:28px 20px;
+  color:#777f90;
+  border-top:1px solid var(--border);
+  font-size:13px;
 }
 
-/* MOBILE */
+.note {
+  margin-top:34px;
+  padding:18px 20px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  color:var(--muted);
+  line-height:1.6;
+}
 
-@media(max-width: 700px) {
+@media(max-width:600px) {
+  header {
+    padding-top:50px;
+  }
 
-    header {
-        padding:
-            40px 20px
-            65px;
-    }
+  .section-head {
+    display:block;
+  }
 
-    h1 {
-        font-size: 48px;
-    }
-
-    .hero {
-        font-size: 16px;
-    }
-
-    main {
-        padding:
-            50px 20px
-            70px;
-    }
-
-    .section-head h2 {
-        font-size: 32px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .icon {
-        height: 145px;
-    }
+  .section-head p {
+    margin-top:7px;
+  }
 }
 </style>
 </head>
@@ -329,271 +200,157 @@ footer {
 <body>
 
 <header>
+  <div class="logo">✦ OFFICIAL ANIMATION LIBRARY</div>
 
-    <div class="logo">
-        ✦ OFFICIAL ANIMATION LIBRARY
-    </div>
+  <h1>Anton Animation</h1>
 
-    <h1>Anton Animation</h1>
-
-    <p class="hero">
-        Animated PowerPoint templates, ready to download.
-        Every download is the original <strong>.pptx</strong> file,
-        so the PowerPoint animations and transitions stay inside the presentation.
-    </p>
-
+  <p class="hero">
+    Animated PowerPoint templates, ready to download.
+    Every download is the original <strong>.pptx</strong> file,
+    so the PowerPoint animations and transitions stay inside the presentation.
+  </p>
 </header>
-
 
 <main>
 
-    <div class="section-head">
-
-        <h2>Animation Library</h2>
-
-        <p>
-            Choose an animation and download the editable PowerPoint.
-        </p>
-
+  <div class="section-head">
+    <div>
+      <h2>Animation Library</h2>
+      <p>Choose an animation and download the editable PowerPoint.</p>
     </div>
+  </div>
 
+  <section class="grid">
 
-    <section class="grid">
+    <!-- 1. Arrow Movement -->
+    <article class="card">
+      <div class="icon">1</div>
 
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-        <!-- 1. ARROW MOVEMENT -->
+        <h2>Arrow Movement</h2>
 
-        <article class="card">
+        <p>Smooth directional arrow movement animation.</p>
 
-            <div class="icon">
-                1
-            </div>
+        <a class="download"
+           href="animations/arrow-movement.pptx"
+           download>
+          Download PPT <span>↓</span>
+        </a>
+      </div>
+    </article>
 
-            <div class="card-body">
 
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
+    <!-- 2. Flip Rectangle -->
+    <article class="card">
+      <div class="icon">2</div>
 
-                <h2>
-                    Arrow Movement
-                </h2>
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-                <p>
-                    Smooth directional arrow movement animation.
-                </p>
+        <h2>Flip Rectangle</h2>
 
-                <a
-                    class="download"
-                    href="animations/arrow-movement.pptx"
-                    download
-                >
-                    Download PPT
-                    <span>↓</span>
-                </a>
+        <p>Clean rectangle flip animation.</p>
 
-            </div>
+        <a class="download"
+           href="animations/flip-rectangle.pptx"
+           download>
+          Download PPT <span>↓</span>
+        </a>
+      </div>
+    </article>
 
-        </article>
 
+    <!-- 3. Move Bar -->
+    <article class="card">
+      <div class="icon">3</div>
 
-        <!-- 2. FLIP RECTANGLE -->
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-        <article class="card">
+        <h2>Move Bar</h2>
 
-            <div class="icon">
-                2
-            </div>
+        <p>Simple moving bar animation for presentations.</p>
 
-            <div class="card-body">
+        <a class="download"
+           href="move-bar.html">
+          View Variants <span>→</span>
+        </a>
+      </div>
+    </article>
 
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
 
-                <h2>
-                    Flip Rectangle
-                </h2>
+    <!-- 4. Pull File -->
+    <article class="card">
+      <div class="icon">4</div>
 
-                <p>
-                    Clean rectangle flip animation.
-                </p>
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-                <a
-                    class="download"
-                    href="animations/flip-rectangle.pptx"
-                    download
-                >
-                    Download PPT
-                    <span>↓</span>
-                </a>
+        <h2>Pull File</h2>
 
-            </div>
+        <p>File-pull style PowerPoint animation.</p>
 
-        </article>
+        <a class="download"
+           href="pull-file.html">
+          View Variants <span>→</span>
+        </a>
+      </div>
+    </article>
 
 
-        <!-- 3. MOVE BAR -->
+    <!-- 5. Rotation -->
+    <article class="card">
+      <div class="icon">5</div>
 
-        <article class="card">
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-            <div class="icon">
-                3
-            </div>
+        <h2>Rotation</h2>
 
-            <div class="card-body">
+        <p>Rotating object animation for PowerPoint.</p>
 
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
+        <a class="download"
+           href="animations/rotation.pptx"
+           download>
+          Download PPT <span>↓</span>
+        </a>
+      </div>
+    </article>
 
-                <h2>
-                    Move Bar
-                </h2>
 
-                <p>
-                    Simple moving bar animation for presentations.
-                </p>
+    <!-- 6. Steps -->
+    <article class="card">
+      <div class="icon">6</div>
 
-                <a
-                    class="download"
-                    href="move-bar.html"
-                >
-                    View Variants
-                    <span>→</span>
-                </a>
+      <div class="card-body">
+        <span class="tag">PPTX • ANIMATED</span>
 
-            </div>
+        <h2>Steps</h2>
 
-        </article>
+        <p>Step-by-step presentation animation.</p>
 
+        <a class="download"
+           href="animations/steps.pptx"
+           download>
+          Download PPT <span>↓</span>
+        </a>
+      </div>
+    </article>
 
-        <!-- 4. PULL -->
+  </section>
 
-        <article class="card">
-
-            <div class="icon">
-                4
-            </div>
-
-            <div class="card-body">
-
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
-
-                <h2>
-                    Pull
-                </h2>
-
-                <p>
-                    File-pull style PowerPoint animation.
-                </p>
-
-                <a
-                    class="download"
-                    href="pull.html"
-                >
-                    View Variants
-                    <span>→</span>
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- 5. ROTATION -->
-
-        <article class="card">
-
-            <div class="icon">
-                5
-            </div>
-
-            <div class="card-body">
-
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
-
-                <h2>
-                    Rotation
-                </h2>
-
-                <p>
-                    Rotating object animation for PowerPoint.
-                </p>
-
-                <a
-                    class="download"
-                    href="animations/rotation.pptx"
-                    download
-                >
-                    Download PPT
-                    <span>↓</span>
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- 6. STEPS -->
-
-        <article class="card">
-
-            <div class="icon">
-                6
-            </div>
-
-            <div class="card-body">
-
-                <span class="tag">
-                    PPTX • ANIMATED
-                </span>
-
-                <h2>
-                    Steps
-                </h2>
-
-                <p>
-                    Step-by-step presentation animation.
-                </p>
-
-                <a
-                    class="download"
-                    href="animations/steps.pptx"
-                    download
-                >
-                    Download PPT
-                    <span>↓</span>
-                </a>
-
-            </div>
-
-        </article>
-
-
-    </section>
-
-
-    <div class="note">
-
-        💡 <strong>Tip:</strong>
-        Open the downloaded file in Microsoft PowerPoint to view
-        and edit the animations. The website does not convert the
-        presentation into a video or PDF.
-
-    </div>
+  <div class="note">
+    💡 <strong>Tip:</strong>
+    Open the downloaded file in Microsoft PowerPoint to view and edit the animations.
+    The website does not convert the presentation into a video or PDF.
+  </div>
 
 </main>
 
-
 <footer>
-
-    © 2026 Anton Animation • PowerPoint Animation Library
-
+  © 2026 Anton Animation • PowerPoint Animation Library
 </footer>
 
 </body>
