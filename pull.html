@@ -30,15 +30,8 @@ html {
 
 body {
     margin: 0;
-
-    font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
 
     background:
         radial-gradient(
@@ -54,13 +47,12 @@ body {
 header {
     padding: 60px 24px;
     text-align: center;
-
     border-bottom: 1px solid var(--border);
 
     background:
         linear-gradient(
             180deg,
-            rgba(155, 108, 255, .10),
+            rgba(155,108,255,.10),
             transparent
         );
 }
@@ -68,7 +60,7 @@ header {
 header h1 {
     margin: 0 0 10px;
     font-size: 42px;
-    letter-spacing: -0.03em;
+    letter-spacing: -.03em;
 }
 
 header p {
@@ -84,29 +76,24 @@ main {
 
 .back {
     display: inline-block;
-
     margin-bottom: 30px;
-
     padding: 11px 16px;
 
     background: var(--panel2);
-
     color: var(--text);
 
     text-decoration: none;
 
     border: 1px solid var(--border);
-
     border-radius: 12px;
 
     font-weight: 700;
-
     transition: .2s;
 }
 
 .back:hover {
-    border-color: #5b477f;
     background: #211b30;
+    border-color: #5b477f;
 }
 
 h2 {
@@ -121,10 +108,8 @@ h2 {
 
 .grid {
     display: grid;
-
     grid-template-columns:
         repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 20px;
 }
 
@@ -137,9 +122,7 @@ h2 {
         );
 
     border: 1px solid var(--border);
-
     padding: 25px;
-
     border-radius: 20px;
 
     text-align: center;
@@ -152,11 +135,10 @@ h2 {
 
 .card:hover {
     transform: translateY(-4px);
-
     border-color: #5b477f;
 
     box-shadow:
-        0 16px 45px rgba(0, 0, 0, .25);
+        0 16px 45px rgba(0,0,0,.25);
 }
 
 .card h3 {
@@ -174,11 +156,9 @@ h2 {
     display: inline-block;
 
     margin-top: 20px;
-
     padding: 12px 20px;
 
     background: var(--accent);
-
     color: white;
 
     text-decoration: none;
@@ -192,7 +172,6 @@ h2 {
 
 .download:hover {
     background: #aa80ff;
-
     transform: translateY(-1px);
 }
 
@@ -229,8 +208,8 @@ footer p {
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
@@ -239,9 +218,7 @@ footer p {
 
     <h1>🎬 Anton Animation</h1>
 
-    <p>
-        Pull File Animation Variants
-    </p>
+    <p>Pull File Animation Variants</p>
 
 </header>
 
@@ -249,71 +226,62 @@ footer p {
 <main>
 
 
-    <a
-        class="back"
-        href="./index.html"
-    >
-        ← Back to Animations
-    </a>
+<a class="back" href="./index.html">
+    ← Back to Animations
+</a>
 
 
-    <h2>Pull File</h2>
+<h2>Pull File</h2>
 
-    <p class="intro">
-        Choose a Pull File variant to download.
-    </p>
-
-
-    <div class="grid">
+<p class="intro">
+    Choose a Pull File variant to download.
+</p>
 
 
-        <!-- Pull Variant 1 -->
-
-        <div class="card">
-
-            <h3>
-                Pull Variant 1
-            </h3>
-
-            <p>
-                Pull File animation - Variant 1
-            </p>
-
-            <a
-                class="download"
-                href="./pull-file%283%29.pptx"
-                download
-            >
-                ⬇ Download
-            </a>
-
-        </div>
+<div class="grid">
 
 
-        <!-- Pull Variant 2 -->
+    <!-- PULL VARIANT 1 -->
 
-        <div class="card">
+    <div class="card">
 
-            <h3>
-                Pull Variant 2
-            </h3>
+        <h3>Pull Variant 1</h3>
 
-            <p>
-                Pull File animation - Variant 2
-            </p>
+        <p>
+            Pull File animation - Variant 1
+        </p>
 
-            <a
-                class="download"
-                href="./pull-file%284%29.pptx"
-                download
-            >
-                ⬇ Download
-            </a>
-
-        </div>
-
+        <a
+            class="download"
+            href="/Anton-Animation/pull-file%283%29.pptx"
+        >
+            ⬇ Download
+        </a>
 
     </div>
+
+
+    <!-- PULL VARIANT 2 -->
+
+    <div class="card">
+
+        <h3>Pull Variant 2</h3>
+
+        <p>
+            Pull File animation - Variant 2
+        </p>
+
+        <a
+            class="download"
+            href="/Anton-Animation/pull-file%284%29.pptx"
+        >
+            ⬇ Download
+        </a>
+
+    </div>
+
+
+</div>
 
 
 </main>
@@ -321,13 +289,9 @@ footer p {
 
 <footer>
 
-    <p>
-        © 2026 Anton Animation
-    </p>
+    <p>© 2026 Anton Animation</p>
 
-    <p>
-        Created by Anton Savin Sibu
-    </p>
+    <p>Created by Anton Savin Sibu</p>
 
 </footer>
 
