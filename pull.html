@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,6 +22,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -50,7 +53,6 @@ body {
 
 header {
     padding: 60px 24px;
-
     text-align: center;
 
     border-bottom: 1px solid var(--border);
@@ -58,7 +60,7 @@ header {
     background:
         linear-gradient(
             180deg,
-            rgba(155,108,255,.10),
+            rgba(155, 108, 255, .10),
             transparent
         );
 }
@@ -66,17 +68,17 @@ header {
 header h1 {
     margin: 0 0 10px;
     font-size: 42px;
+    letter-spacing: -0.03em;
 }
 
 header p {
+    margin: 0;
     color: var(--muted);
 }
 
 main {
     max-width: 1000px;
-
     margin: auto;
-
     padding: 40px 24px 80px;
 }
 
@@ -98,6 +100,8 @@ main {
     border-radius: 12px;
 
     font-weight: 700;
+
+    transition: .2s;
 }
 
 .back:hover {
@@ -106,13 +110,13 @@ main {
 }
 
 h2 {
+    margin: 0 0 8px;
     font-size: 30px;
-    margin-bottom: 8px;
 }
 
 .intro {
+    margin: 0 0 30px;
     color: var(--muted);
-    margin-bottom: 30px;
 }
 
 .grid {
@@ -140,7 +144,10 @@ h2 {
 
     text-align: center;
 
-    transition: .2s;
+    transition:
+        .2s transform,
+        .2s border-color,
+        .2s box-shadow;
 }
 
 .card:hover {
@@ -149,22 +156,24 @@ h2 {
     border-color: #5b477f;
 
     box-shadow:
-        0 16px 45px rgba(0,0,0,.25);
+        0 16px 45px rgba(0, 0, 0, .25);
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
     font-size: 20px;
 }
 
 .card p {
+    margin: 0;
     color: var(--muted);
+    line-height: 1.5;
 }
 
 .download {
     display: inline-block;
 
-    margin-top: 15px;
+    margin-top: 20px;
 
     padding: 12px 20px;
 
@@ -177,10 +186,14 @@ h2 {
     border-radius: 12px;
 
     font-weight: 800;
+
+    transition: .2s;
 }
 
 .download:hover {
     background: #aa80ff;
+
+    transform: translateY(-1px);
 }
 
 footer {
@@ -195,8 +208,27 @@ footer {
     font-size: 13px;
 }
 
-</style>
+footer p {
+    margin: 5px 0;
+}
 
+@media (max-width: 600px) {
+
+    header {
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    main {
+        padding: 30px 18px 60px;
+    }
+
+}
+
+</style>
 </head>
 
 
@@ -217,76 +249,86 @@ footer {
 <main>
 
 
-<a class="back" href="./index.html">
-    ← Back to Animations
-</a>
+    <a
+        class="back"
+        href="./index.html"
+    >
+        ← Back to Animations
+    </a>
 
 
-<h2>Pull File</h2>
+    <h2>Pull File</h2>
+
+    <p class="intro">
+        Choose a Pull File variant to download.
+    </p>
 
 
-<p class="intro">
-    Choose a Pull File variant to download.
-</p>
+    <div class="grid">
 
 
-<div class="grid">
+        <!-- Pull Variant 1 -->
+
+        <div class="card">
+
+            <h3>
+                Pull Variant 1
+            </h3>
+
+            <p>
+                Pull File animation - Variant 1
+            </p>
+
+            <a
+                class="download"
+                href="./pull-file%283%29.pptx"
+                download
+            >
+                ⬇ Download
+            </a>
+
+        </div>
 
 
-    <!-- Pull Variant 1 -->
+        <!-- Pull Variant 2 -->
 
-    <div class="card">
+        <div class="card">
 
-        <h3>
-            Pull Variant 1
-        </h3>
+            <h3>
+                Pull Variant 2
+            </h3>
 
-        <p>
-            Pull File animation - Variant 1
-        </p>
+            <p>
+                Pull File animation - Variant 2
+            </p>
 
-        <a
-            class="download"
-            href="./pull-file(3).pptx"
-            download
-        >
-            ⬇ Download
-        </a>
+            <a
+                class="download"
+                href="./pull-file%284%29.pptx"
+                download
+            >
+                ⬇ Download
+            </a>
+
+        </div>
+
 
     </div>
-
-
-    <!-- Pull Variant 2 -->
-
-    <div class="card">
-
-        <h3>
-            Pull Variant 2
-        </h3>
-
-        <p>
-            Pull File animation - Variant 2
-        </p>
-
-        <a
-            class="download"
-            href="./pull-file(4).pptx"
-            download
-        >
-            ⬇ Download
-        </a>
-
-    </div>
-
-
-</div>
 
 
 </main>
 
 
 <footer>
-    © 2026 Anton Animation • PowerPoint Animation Library
+
+    <p>
+        © 2026 Anton Animation
+    </p>
+
+    <p>
+        Created by Anton Savin Sibu
+    </p>
+
 </footer>
 
 
