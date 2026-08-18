@@ -1,201 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Move Bar - Anton Animation</title>
 
 <style>
+
 :root {
-  --bg:#0b0d12;
-  --panel:#121620;
-  --panel2:#171b27;
-  --text:#f7f7fb;
-  --muted:#a8afbf;
-  --accent:#9b6cff;
-  --accent2:#c5a8ff;
-  --border:#272d3b;
+    --bg: #0b0d12;
+    --panel: #121620;
+    --panel2: #171b27;
+    --text: #f7f7fb;
+    --muted: #a8afbf;
+    --accent: #9b6cff;
+    --accent2: #c5a8ff;
+    --border: #272d3b;
 }
 
 * {
-  box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:
-    radial-gradient(circle at 15% 0%, #21153d 0, transparent 35%),
-    var(--bg);
-  color:var(--text);
+    margin: 0;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            #21153d 0,
+            transparent 35%
+        ),
+        var(--bg);
+
+    color: var(--text);
 }
 
 header {
-  padding:60px 24px;
-  text-align:center;
-  border-bottom:1px solid var(--border);
-  background:linear-gradient(180deg,rgba(155,108,255,.10),transparent);
+    padding: 60px 24px;
+    text-align: center;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(155,108,255,.10),
+            transparent
+        );
 }
 
 header h1 {
-  margin:0 0 10px;
-  font-size:42px;
+    margin: 0 0 10px;
+    font-size: 42px;
 }
 
 header p {
-  color:var(--muted);
+    color: var(--muted);
 }
 
 main {
-  max-width:1000px;
-  margin:auto;
-  padding:40px 24px 80px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 24px 80px;
 }
 
 .back {
-  display:inline-block;
-  margin-bottom:30px;
-  padding:11px 16px;
-  background:var(--panel2);
-  color:var(--text);
-  text-decoration:none;
-  border:1px solid var(--border);
-  border-radius:12px;
-  font-weight:700;
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    padding: 11px 16px;
+
+    background: var(--panel2);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    font-weight: 700;
 }
 
 .back:hover {
-  border-color:#5b477f;
-  background:#211b30;
+    border-color: #5b477f;
+    background: #211b30;
 }
 
 h2 {
-  font-size:30px;
-  margin-bottom:8px;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
 .intro {
-  color:var(--muted);
-  margin-bottom:30px;
+    color: var(--muted);
+    margin-bottom: 30px;
 }
 
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
 }
 
 .card {
-  background:linear-gradient(145deg,var(--panel2),var(--panel));
-  border:1px solid var(--border);
-  padding:25px;
-  border-radius:20px;
-  text-align:center;
-  transition:.2s;
+    background:
+        linear-gradient(
+            145deg,
+            var(--panel2),
+            var(--panel)
+        );
+
+    border: 1px solid var(--border);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: .2s;
 }
 
 .card:hover {
-  transform:translateY(-4px);
-  border-color:#5b477f;
-  box-shadow:0 16px 45px rgba(0,0,0,.25);
+    transform: translateY(-4px);
+
+    border-color: #5b477f;
+
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.25);
 }
 
 .card h3 {
-  margin-top:0;
-  font-size:20px;
+    margin-top: 0;
+    font-size: 20px;
 }
 
 .card p {
-  color:var(--muted);
+    color: var(--muted);
 }
 
 .download {
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 20px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  border-radius:12px;
-  font-weight:800;
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 20px;
+
+    background: var(--accent);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: 800;
 }
 
 .download:hover {
-  background:#aa80ff;
+    background: #aa80ff;
 }
 
 footer {
-  text-align:center;
-  padding:28px 20px;
-  color:#777f90;
-  border-top:1px solid var(--border);
-  font-size:13px;
+    text-align: center;
+
+    padding: 28px 20px;
+
+    color: #777f90;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-  <h1>🎬 Anton Animation</h1>
-  <p>Move Bar Animation Variants</p>
+
+    <h1>🎬 Anton Animation</h1>
+
+    <p>
+        Move Bar Animation Variants
+    </p>
+
 </header>
+
 
 <main>
 
+
 <a class="back" href="./index.html">
-  ← Back to Animations
+    ← Back to Animations
 </a>
+
 
 <h2>Move Bar</h2>
 
+
 <p class="intro">
-  Choose a Move Bar variant to download.
+    Choose a Move Bar variant to download.
 </p>
+
 
 <div class="grid">
 
-  <div class="card">
-    <h3>Move Bar Variant 1</h3>
-    <p>Move Bar animation - Variant 1</p>
 
-    <a class="download"
-       href="./move-bar(2).pptx"
-       download>
-      ⬇ Download
-    </a>
-  </div>
+    <!-- Variant 1 -->
 
-  <div class="card">
-    <h3>Move Bar Variant 2</h3>
-    <p>Move Bar animation - Variant 2</p>
+    <div class="card">
 
-    <a class="download"
-       href="./move-bar(3).pptx"
-       download>
-      ⬇ Download
-    </a>
-  </div>
+        <h3>
+            Move Bar Variant 1
+        </h3>
 
-  <div class="card">
-    <h3>Move Bar Variant 3</h3>
-    <p>Move Bar animation - Variant 3</p>
+        <p>
+            Move Bar animation - Variant 1
+        </p>
 
-    <a class="download"
-       href="./move-bar(4).pptx"
-       download>
-      ⬇ Download
-    </a>
-  </div>
+        <a
+            class="download"
+            href="./move-bar(2).pptx"
+            download
+        >
+            ⬇ Download
+        </a>
+
+    </div>
+
+
+    <!-- Variant 2 -->
+
+    <div class="card">
+
+        <h3>
+            Move Bar Variant 2
+        </h3>
+
+        <p>
+            Move Bar animation - Variant 2
+        </p>
+
+        <a
+            class="download"
+            href="./move-bar(3).pptx"
+            download
+        >
+            ⬇ Download
+        </a>
+
+    </div>
+
+
+    <!-- Variant 3 -->
+
+    <div class="card">
+
+        <h3>
+            Move Bar Variant 3
+        </h3>
+
+        <p>
+            Move Bar animation - Variant 3
+        </p>
+
+        <a
+            class="download"
+            href="./move-bar(4).pptx"
+            download
+        >
+            ⬇ Download
+        </a>
+
+    </div>
+
 
 </div>
 
+
 </main>
 
+
 <footer>
-  © 2026 Anton Animation • PowerPoint Animation Library
+    © 2026 Anton Animation • PowerPoint Animation Library
 </footer>
 
+
 </body>
+
 </html>
