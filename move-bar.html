@@ -4,128 +4,531 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Move Bar Variants - Anton Animation</title>
+<title>Move Bar - Anton Animation</title>
 
 <style>
+
+:root {
+    --bg: #090b10;
+    --panel: #11151f;
+    --panel2: #151a26;
+    --text: #f7f7fb;
+    --muted: #aeb5c7;
+    --accent: #9b63ff;
+    --accent-light: #c7a5ff;
+    --border: #292e3d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111827;
-    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            rgba(104, 50, 180, 0.22),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color: var(--text);
 }
+
+/* HEADER */
 
 header {
+    padding: 60px 24px 70px;
+
     text-align: center;
-    padding: 30px;
-    background: #1f2937;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(139, 92, 246, 0.15),
+            transparent 48%
+        );
 }
+
+.logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 15px;
+
+    border: 1px solid #3b3152;
+
+    border-radius: 999px;
+
+    color: var(--accent-light);
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    font-size: 12px;
+}
+
+header h1 {
+    margin: 22px 0 12px;
+
+    font-size: clamp(48px, 8vw, 78px);
+
+    letter-spacing: -0.05em;
+}
+
+header p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+/* MAIN */
 
 main {
-    max-width: 1000px;
+    max-width: 1100px;
+
     margin: auto;
-    padding: 30px;
+
+    padding: 45px 30px 90px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.download {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #8b5cf6;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.download:hover {
-    background: #7c3aed;
-}
+/* BACK BUTTON */
 
 .back {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 20px;
-    background: #374151;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 45px;
+
+    padding: 11px 17px;
+
+    background: #151a26;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
     color: white;
+
     text-decoration: none;
-    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
 }
 
 .back:hover {
-    background: #4b5563;
+    background: #211b32;
+
+    border-color: #69499e;
+
+    transform: translateY(-2px);
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #1f2937;
-    margin-top: 40px;
-    color: #d1d5db;
+/* TITLE */
+
+.section-head {
+    margin-bottom: 30px;
 }
+
+.section-head h2 {
+    margin: 0;
+
+    font-size: 38px;
+}
+
+.section-head p {
+    margin: 9px 0 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 24px;
+}
+
+/* CARD */
+
+.card {
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--panel2),
+            var(--panel)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: #69499e;
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.38);
+}
+
+/* NUMBER AREA */
+
+.number {
+    height: 175px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 70px;
+
+    font-weight: 800;
+
+    color: var(--accent-light);
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(139, 92, 246, 0.34),
+            rgba(139, 92, 246, 0.08) 35%,
+            transparent 68%
+        ),
+        #10131c;
+}
+
+/* CARD CONTENT */
+
+.card-body {
+    padding: 28px;
+}
+
+.tag {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--accent-light);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+
+    font-size: 26px;
+}
+
+.card p {
+    margin: 0;
+
+    min-height: 52px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding: 15px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b63ff,
+            #8e57ed
+        );
+
+    border-radius: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.download:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #aa78ff,
+            #9b63ff
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 25px rgba(139, 92, 246, 0.30);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 20px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: #777f90;
+
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 50px 20px 60px;
+    }
+
+    header h1 {
+        font-size: 48px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 35px 20px 70px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .number {
+        height: 150px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-    <h1>🎬 Move Bar</h1>
-    <p>Choose a Move Bar variant</p>
+
+    <div class="logo">
+        ✦ OFFICIAL ANIMATION LIBRARY
+    </div>
+
+    <h1>Anton Animation</h1>
+
+    <p>
+        Move Bar animation variants, ready to download.
+        Every download is the original <strong>.pptx</strong> file,
+        so the PowerPoint animations and transitions stay inside the presentation.
+    </p>
+
 </header>
+
 
 <main>
 
-<h2>Move Bar Variants</h2>
-
-<div class="grid">
-
-    <div class="card">
-        <h3>Move Bar - Variant 1</h3>
-        <p>PowerPoint animation</p>
-        <a class="download" href="./move-bar(2).pptx" download>
-            ⬇ Download
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Move Bar - Variant 2</h3>
-        <p>PowerPoint animation</p>
-        <a class="download" href="./move-bar(3).pptx" download>
-            ⬇ Download
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Move Bar - Variant 3</h3>
-        <p>PowerPoint animation</p>
-        <a class="download" href="./move-bar(4).pptx" download>
-            ⬇ Download
-        </a>
-    </div>
-
-</div>
 
 <a class="back" href="./index.html">
     ← Back to Animations
 </a>
 
+
+<div class="section-head">
+
+    <h2>Move Bar</h2>
+
+    <p>
+        Choose a Move Bar variant to download.
+    </p>
+
+</div>
+
+
+<div class="grid">
+
+
+    <!-- Move Bar Variant 1 -->
+
+    <div class="card">
+
+        <div class="number">
+            1
+        </div>
+
+        <div class="card-body">
+
+            <span class="tag">
+                PPTX • ANIMATED
+            </span>
+
+            <h3>
+                Move Bar Variant 1
+            </h3>
+
+            <p>
+                Move Bar animation - Variant 1
+            </p>
+
+            <a
+                class="download"
+                href="./move-bar(2).pptx"
+                download
+            >
+                Download PPT
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Move Bar Variant 2 -->
+
+    <div class="card">
+
+        <div class="number">
+            2
+        </div>
+
+        <div class="card-body">
+
+            <span class="tag">
+                PPTX • ANIMATED
+            </span>
+
+            <h3>
+                Move Bar Variant 2
+            </h3>
+
+            <p>
+                Move Bar animation - Variant 2
+            </p>
+
+            <a
+                class="download"
+                href="./move-bar(3).pptx"
+                download
+            >
+                Download PPT
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Move Bar Variant 3 -->
+
+    <div class="card">
+
+        <div class="number">
+            3
+        </div>
+
+        <div class="card-body">
+
+            <span class="tag">
+                PPTX • ANIMATED
+            </span>
+
+            <h3>
+                Move Bar Variant 3
+            </h3>
+
+            <p>
+                Move Bar animation - Variant 3
+            </p>
+
+            <a
+                class="download"
+                href="./move-bar(4).pptx"
+                download
+            >
+                Download PPT
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
 </main>
 
+
 <footer>
+
     <p>© 2026 Anton Animation</p>
+
     <p>Created by Anton Savin Sibu</p>
+
 </footer>
+
 
 </body>
 </html>
